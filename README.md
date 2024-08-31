@@ -1,6 +1,8 @@
-# flashmaster-backend
-Backend application of FlashMaster android apps
-## Folder Structers
+## Project Overview
+FlashMaster is a flashcard application designed to help students create, organize, and review flashcards efficiently. The backend is built using Node.js, Express, and MongoDB, and follows a modular architecture to ensure scalability and maintainability.
+
+## Folder Structure
+Here's an overview of the project structure:
 ```text:
 flashmaster-backend/
 ├── config/
@@ -44,4 +46,21 @@ flashmaster-backend/
 ├── server.js              # Server startup file
 ├── package.json           # Project dependencies and scripts
 └── README.md              # Project documentation
+```
+## Getting Started
+
+### Prerequisites
+- **Node.js**: Make sure you have Node.js installed (version 14 or above).
+- **MongoDB**: Ensure MongoDB is installed and running locally, or use a cloud-based MongoDB service like MongoDB Atlas.
+
+### Installation
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/flashmaster-backend.git
+   ```
+   
+Navigate to the project directory and install dependency:
+```bash:
+cd flashmaster-backend
+npm install
 ```
