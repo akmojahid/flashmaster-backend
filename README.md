@@ -1,6 +1,7 @@
 # flashmaster-backend
 Backend application of FlashMaster android apps
 ## Folder Structers
+```text:
 flashmaster-backend/
 ├── config/
 │   ├── db.js              # Database connection setup
@@ -43,3 +44,4 @@ flashmaster-backend/
 ├── server.js              # Server startup file
 ├── package.json           # Project dependencies and scripts
 └── README.md              # Project documentation
+```
