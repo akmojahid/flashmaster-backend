@@ -1,7 +1,22 @@
-## Project Overview
-FlashMaster is a flashcard application designed to help students create, organize, and review flashcards efficiently. The backend is built using Node.js, Express, and MongoDB, and follows a modular architecture to ensure scalability and maintainability.
+## 📝Project Overview
+🍎 FlashMaster is a flashcard application designed to help students create, organize, and review flashcards efficiently. The backend is built using Node.js, Express, and MongoDB, and follows a modular architecture to ensure scalability and maintainability.
 
-## Folder Structure
+## Flashcard Management
+- [ ] Create & Edit Flashcards:
+- [ ] Users can create flashcards with the following content types:
+- [ ] Text & Definitions: A rich text editor with basic formatting options.
+- [ ] Questions & Answers: Default setup where questions are visible, and answers are hidden.
+- [ ] Images: Users can upload or link images, with basic image editing features (crop, resize).
+- [ ] Web Links: Users can attach web links, generating previews.
+- [ ] Organize Flashcards:
+- [ ] Tagging: Users can tag flashcards with keywords for easy retrieval.
+- [ ] Deck Management: Users can group flashcards into decks (e.g., by subject, or topic).
+- [ ] Review & Study:
+- [ ] Spaced Repetition: Implement an algorithm to schedule flashcard reviews based on user performance.
+- [ ] Quiz Mode: Users can test themselves with random or sequential flashcard quizzes, tracking accuracy and time taken.
+- [ ] Study Progress Tracking: Track and display user progress, including flashcards studied, retention rates, and study streaks.
+
+## 📁 Folder Structure
 Here's an overview of the project structure:
 ```text:
 flashmaster-backend/
