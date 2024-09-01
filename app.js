@@ -43,7 +43,7 @@ app.get("/api/protecred/", auth, (req, res) => {
   });
 });
 
-app.use(errorHandler);
+// app.use(errorHandler.notFound);
 
 const HOST = process.env.HOST;
 const PORT = process.env.PORT || 4000;
