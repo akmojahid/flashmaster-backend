@@ -1,28 +1,53 @@
 const express = require("express");
-const { notFound, reqLogger } = require("./middlewares/errors_middleware");
-const app = express();
 const cors = require("cors");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-// Enable CORS for all routes
-app.use(cors());
+//imports routes
+const authRoute = require("./routes/auth_route");
+// const flashcardsRoutes = require("./routes/flashcard_routes");
+// const userRoutes = require("./routes/user_routes")
+// const studyRoutes = require("./routes/study_routes")
 
-// Middleware to parse JSON request bodies
-app.use(express.json());
+//handlers middleware
+const errorHandler = require("./middlewares/errors_middleware");
+const auth = require("./middlewares/auth");
 
-// Middleware to log incoming requests
-app.use(reqLogger);
+//dotenv config
+dotenv.config();
 
-//root routes
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the API!, This page is under-development" });
+//initialize express app
+const app = express();
+
+//connect to mongodb
+mongoose
+  .connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("connected to mongoDB"))
+  .catch((err) => console.error("Couldn't connect to MongoDB", err));
+
+//middleware initialization
+app.use("/api/auth", authRoute);
+//   app.use('api/flashcards', flashcardsRoute)
+// app.use("/api/users", usersRoute);
+// app.use("/api/study", studyRoute);
+
+//protected routes
+app.get("/api/protecred/", auth, (req, res) => {
+  res.json({
+    massage: "This is procteced rotues",
+    userId: req.userData.userId,
+    userEmail: req.userData.email,
+  });
 });
 
-//Handaling notfound requests
-app.use(notFound);
-//app listeners
-require("dotenv").config();
+app.use(errorHandler);
+
 const HOST = process.env.HOST;
 const PORT = process.env.PORT || 4000;
-app.listen(3000, () => {
-  console.log(`Server running on ${HOST}:${PORT}`);
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://${HOST}:${PORT}`);
 });
