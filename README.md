@@ -1,6 +1,7 @@
 ## 📝Project Overview
 
 ## Flashcard Management
+- [x] User Authentication
 - [ ] Create & Edit Flashcards:
 - [ ] Users can create flashcards with the following content types:
 - [ ] Text & Definitions: A rich text editor with basic formatting options.
