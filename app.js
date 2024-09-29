@@ -30,7 +30,9 @@ mongoose
 
 //middleware initialization
 app.use("/api/auth", authRoute);
-//   app.use('api/flashcards', flashcardsRoute)
+app.use('api/flashcards', (req, res) => {
+  res.send('page is under development')
+})
 // app.use("/api/users", usersRoute);
 // app.use("/api/study", studyRoute);
 
