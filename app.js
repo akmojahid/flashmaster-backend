@@ -50,6 +50,7 @@ app.get("/api/protecred/", auth, (req, res) => {
 const HOST = process.env.HOST;
 const PORT = process.env.PORT || 4000;
 
+//Emit Server
 app.listen(PORT, () => {
   console.log(`Server running on http://${HOST}:${PORT}`);
 });
