@@ -1,13 +1,22 @@
 ## 📝Project Overview
+Its just a simple Android application backend.
 
-## Flashcard Management
+## WorkFlows
+### Design And Planning
+- [ ] Researching Idea
+- [ ] Drafting Prototype
+- [ ] User Feedback
+- [ ] Audit
+- [ ] Finalization
+
+### Flashcard Management - Development
 - [x] User Authentication
 - [ ] Create & Edit Flashcards:
 - [ ] Users can create flashcards with the following content types:
 - [ ] Text & Definitions: A rich text editor with basic formatting options.
 - [ ] Questions & Answers: Default setup where questions are visible, and answers are hidden.
 - [ ] Images: Users can upload or link images, with basic image editing features (crop, resize).
-- [ ] Web Links: Users can attach web links, generating previews.
+- [ ] Web Links: Users can attach web links to generate previews.
 - [ ] Organize Flashcards:
 - [ ] Tagging: Users can tag flashcards with keywords for easy retrieval.
 - [ ] Deck Management: Users can group flashcards into decks (e.g., by subject, or topic).
