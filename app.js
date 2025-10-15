@@ -21,10 +21,7 @@ const app = express();
 
 //connect to mongodb
 mongoose
-  .connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.DATABASE_URL)
   .then(() => console.log("connected to mongoDB"))
   .catch((err) => console.error("Couldn't connect to MongoDB", err));
 
@@ -45,9 +42,15 @@ app.get("/api/protecred/", auth, (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  // res.send("Welcome to flashcard api");
+  res.json({ message: "Welcome to flashcard api", response: "success", value: "nothings" });
+  res.end();
+});
+
 // app.use(errorHandler.notFound);
 
-const HOST = process.env.HOST;
+const HOST = process.env.HOST || "localhost";
 const PORT = process.env.PORT || 4000;
 
 //Emit Server
