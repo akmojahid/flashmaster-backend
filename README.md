@@ -25,7 +25,7 @@ Its just a simple Android application backend.
 - [ ] Quiz Mode: Users can test themselves with random or sequential flashcard quizzes, tracking accuracy and time taken.
 - [ ] Study Progress Tracking: Track and display user progress, including flashcards studied, retention rates, and study streaks.
 
-## 📁 Folder Structure
+## Folder Structure
 Here's an overview of the project structure:
 ```text:
 flashmaster-backend/
